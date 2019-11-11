@@ -1,0 +1,149 @@
+:root {
+    --dark-theme: #16002F;
+    --light-theme: #fff;
+    --dark-shadow: 0 0 15px -6px rgba(0,0,0, .8);
+    --light-shadow: 0 0 15px -6px rgba(255,255,255, .8);
+}
+
+@font-face {
+    font-family: "Montserrat_Bold";
+    src: url("../fonts/Montserrat/Montserrat_Bold/Montserrat-Bold.ttf") format("ttf"),
+        url("../fonts/Montserrat/Montserrat_Bold/Montserrat-Bold.woff") format("woff"),
+        url("../fonts/Montserrat/Montserrat_Bold/Montserrat-Bold.eot") format("eot"),
+        url("../fonts/Montserrat/Montserrat_Bold/Montserrat-Bold.otf") format("otf");
+}
+
+@font-face {
+    font-family: "Montserrat_ExtraLight";
+    src: url("../fonts/Montserrat/Montserrat_ExtraLight/Montserrat-ExtraLight.ttf") format("ttf"),
+        url("../fonts/Montserrat/Montserrat_ExtraLight/Montserrat-ExtraLight.woff") format("woff"),
+        url("../fonts/Montserrat/Montserrat_ExtraLight/Montserrat-ExtraLight.eot") format("eot"),
+        url("../fonts/Montserrat/Montserrat_ExtraLight/Montserrat-ExtraLight.otf") format("otf");
+}
+
+@font-face {
+    font-family: "Montserrat_Light";
+    src: url("../fonts/Montserrat/Montserrat_Light/Montserrat-Light.ttf") format("ttf"),
+        url("../fonts/Montserrat/Montserrat_Light/Montserrat-Light.woff") format("woff"),
+        url("../fonts/Montserrat/Montserrat_Light/Montserrat-Light.eot") format("eot"),
+        url("../fonts/Montserrat/Montserrat_Light/Montserrat-Light.otf") format("otf");
+}
+
+@font-face {
+    font-family: "Montserrat_Medium";
+    src: url("../fonts/Montserrat/Montserrat_Medium/Montserrat-Medium.ttf") format("ttf"),
+        url("../fonts/Montserrat/Montserrat_Medium/Montserrat-Medium.woff") format("woff"),
+        url("../fonts/Montserrat/Montserrat_Medium/Montserrat-Medium.eot") format("eot"),
+        url("../fonts/Montserrat/Montserrat_Medium/Montserrat-Medium.otf") format("otf");
+}
+
+@font-face {
+    font-family: "Montserrat_SemiBold";
+    src: url("../fonts/Montserrat/Montserrat_SemiBold/Montserrat-SemiBold.ttf") format("ttf"),
+        url("../fonts/Montserrat/Montserrat_SemiBold/Montserrat-SemiBold.woff") format("woff"),
+        url("../fonts/Montserrat/Montserrat_SemiBold/Montserrat-SemiBold.eot") format("eot"),
+        url("../fonts/Montserrat/Montserrat_SemiBold/Montserrat-SemiBold.otf") format("otf");
+}
+
+@font-face {
+    font-family: "Montserrat_Thin";
+    src: url("../fonts/Montserrat/Montserrat_Thin/Montserrat-Thin.ttf") format("ttf"),
+        url("../fonts/Montserrat/Montserrat_Thin/Montserrat-Thin.woff") format("woff"),
+        url("../fonts/Montserrat/Montserrat_Thin/Montserrat-Thin.eot") format("eot"),
+        url("../fonts/Montserrat/Montserrat_Thin/Montserrat-Thin.otf") format("otf");
+}
+
+$font_medium: "Montserrat_Medium";
+$font_bold: "Montserrat_Bold";
+$font_light: "Montserrat_Light";
+$font_semibold: "Montserrat_SemiBold";
+$font_thin: "Montserrat_Thin";
+
+*:focus{
+    outline: none !important;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--dark-theme);
+    transition: all .3s ease-in;
+    &.bg-main{
+        color: #fff !important;
+        &.light{
+            color: #000 !important;
+        }
+    }
+}
+
+@media (min-width: 1601px) {
+    .container {
+        max-width: 1550px !important;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+    .container {
+        max-width: 1380px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.99px) {
+    .container {
+        max-width: 1190px !important;
+    }
+}
+
+// font-size
+@for $i from 0 to 200 {
+    .f#{$i} {
+        font-size: $i + px;
+    }
+}
+
+.font {
+    &-light {
+        font-family: $font_light;
+    }
+
+    &-medium {
+        font-family: $font_medium;
+    }
+}
+
+.dark-theme{
+    &-main{
+        background-color: #16002F;
+    }
+
+    &-secondary{
+        background-color: #1D013D;
+    }
+    
+}
+
+
+
+.border{
+    &-light{
+        background: #16002F;
+        border: 1px solid #979797;
+        border-radius: 5px;
+    }
+
+    &-active{
+        background: #16002F;
+        border: 1px solid #22E627;
+        border-radius: 5px;
+    }
+}
+
+.color{
+    &-green{
+        color: #22E627 !important;
+    }
+
+    &-red{
+       color: #D0021B !important;
+    }
+}
+
